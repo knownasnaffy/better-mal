@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 nav .scrollbar-hide { display: flex; flex-direction: column; }
+
+.overflow-auto {
+	scrollbar-gutter: stable both-edges;
+}
