@@ -13,7 +13,7 @@ const Library = () => {
 	const [query, setQuery] = useState('')
 	return (
 		<>
-			<div className='flex flex-col w-full items-center p-4 overflow-auto'>
+			<div className='flex flex-col w-full items-center p-4 overflow-auto scrollbox'>
 				<div className='flex flex-row w-full max-w-screen-sm gap-2'>
 					<Input
 						placeholder='Search...'

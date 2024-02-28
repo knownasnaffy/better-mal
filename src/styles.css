@@ -2,8 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-nav .scrollbar-hide { display: flex; flex-direction: column; }
+nav .scrollbar-hide {
+	display: flex;
+	flex-direction: column;
+}
 
 .overflow-auto {
 	scrollbar-gutter: stable both-edges;
+}
+
+/* For browsers that support `scrollbar-*` properties */
+@supports (scrollbar-color: auto) {
+  .scrollbox {
+    scrollbar-color: #006FEE transparent;
+  }
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+	.scrollbox::-webkit-scrollbar {
+		background: transparent;
+		width: 12px;
+	}
+	.scrollbox::-webkit-scrollbar-thumb {
+		background: #006fee;
+		border-radius: 100px;
+	}
 }
